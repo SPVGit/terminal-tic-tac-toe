@@ -26,5 +26,10 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
+    if(validateMove(move, board)) {
+        board[xAndY[0]][xAndY[1]] = player;
+        return true;
+    }
+
     return false;
 }
